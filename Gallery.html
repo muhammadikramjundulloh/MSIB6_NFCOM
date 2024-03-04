@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #333;
+        }
+
+        marquee {
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+
+        img {
+            margin: 10px;
+            border: 2px solid #ff9000;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <marquee direction="left" behavior="alternate" scrollamount="5">
+        <img src="Gambar/foto1.jpeg" alt="Gambar 1" width="220" height="250">
+        <img src="Gambar/foto2.jpeg" alt="Gambar 2" width="220" height="250">
+        <img src="Gambar/foto3.jpeg" alt="Gambar 3" width="220" height="250">
+    </marquee>
+</body>
+</html>
