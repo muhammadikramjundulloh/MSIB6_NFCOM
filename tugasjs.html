@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Pegawai</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <style>
-    
     table {
       border-collapse: collapse;
       width: 100%;
@@ -29,16 +28,13 @@
       font-weight: bold;
     }
 
-    h2{
-         font-family: "Amiri", serif;;
+    h2 {
+      font-family: "Amiri", serif;;
     }
   </style>
 </head>
 <body>
-
-    <h2 align = 'center'>بِسْمِ اللَّهِ الرحمن الرَّحِيمِ <hr>Tugas 1 Javascript
-        
-    </h2>
+  <h2 align='center'>بِسْمِ اللَّهِ الرحمن الرَّحِيمِ <hr>Tugas 1 Javascript</h2>
   <table id="pegawaiTable">
     <thead>
       <tr>
@@ -49,7 +45,6 @@
         <th>Tunjangan Jabatan</th>
         <th>BPJS</th>
         <th>Tunjangan Keluarga</th>
-        <th>Total Gaji</th>
       </tr>
     </thead>
     <tbody>
@@ -61,24 +56,18 @@
         <td></td>
         <td></td>
         <td></td>
-        <td></td>
       </tr>
-     
     </tbody>
     <tfoot>
       <tr>
-        <td colspan="3"></td>
+        <td colspan="5"></td>
         <td>Total Gaji</td>
-        <td id="totalTunjanganJabatan"></td>
-        <td id="totalBPJS"></td>
-        <td id="totalTunjanganKeluarga"></td>
         <td id="totalGaji"></td>
       </tr>
     </tfoot>
   </table>
 
   <script>
-    
     function hitungTunjanganJabatan(gajiPokok, jabatan) {
       if (jabatan === 'Manager') {
         return 0.15 * gajiPokok;
@@ -91,21 +80,17 @@
       }
     }
 
- 
     function hitungBPJS(gajiPokok) {
       return 0.1 * gajiPokok;
     }
 
-   
     function hitungTunjanganKeluarga(gajiPokok, status) {
       return status === 'Menikah' ? 0.2 * gajiPokok : 0;
     }
 
-   
     function hitungTotalGaji(gajiPokok, tunjanganJabatan, bpjs, tunjanganKeluarga) {
       return gajiPokok + tunjanganJabatan + bpjs + tunjanganKeluarga;
     }
-
 
     const ridwanGajiPokok = 15000000;
     const ridwanJabatan = 'Manager';
@@ -119,19 +104,10 @@
     document.getElementById('ridwanRow').cells[4].textContent = tunjanganJabatanRidwan.toLocaleString();
     document.getElementById('ridwanRow').cells[5].textContent = bpjsRidwan.toLocaleString();
     document.getElementById('ridwanRow').cells[6].textContent = tunjanganKeluargaRidwan.toLocaleString();
-    document.getElementById('ridwanRow').cells[7].textContent = totalGajiRidwan.toLocaleString();
-
     
-    const totalTunjanganJabatan = tunjanganJabatanRidwan; 
-    const totalBPJS = bpjsRidwan; 
-    const totalTunjanganKeluarga = tunjanganKeluargaRidwan; 
-    const totalGaji = totalGajiRidwan; 
+    const totalGaji = totalGajiRidwan;
 
-    document.getElementById('totalTunjanganJabatan').textContent = totalTunjanganJabatan.toLocaleString();
-    document.getElementById('totalBPJS').textContent = totalBPJS.toLocaleString();
-    document.getElementById('totalTunjanganKeluarga').textContent = totalTunjanganKeluarga.toLocaleString();
     document.getElementById('totalGaji').textContent = totalGaji.toLocaleString();
   </script>
-
 </body>
 </html>
