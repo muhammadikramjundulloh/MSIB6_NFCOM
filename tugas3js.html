@@ -1,23 +1,47 @@
-<body>
-    <script>
-        let s1 = {"nama" : "Andi", nilai: 80};
-        let s2 = {"nama" : "Ali", nilai: 90};
-        let s3 = {"nama" : "Aji", nilai: 70};
-        let s4 = {"nama" : "Ani", nilai: 90};
-        let s5 = {"nama" : "Ando", nilai: 85};
-        let s6 = {"nama" : "Kurnia", nilai: 85};
-        let s7 = {"nama" : "Mega", nilai: 65};
-        let s8 = {"nama" : "Didit", nilai: 75};
-        let s9 = {"nama" : "Josep", nilai: 55};
-        let s10 = {"nama" : "Yanto", nilai: 95};
-        let s11 = {"nama" : "Yudis", nilai: 85};
-        let s12 = {"nama" : "Faqih", nilai: 85};
-        let s13 = {"nama" : "Joshua", nilai: 75};
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Nilai Siswa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
 
-        let siswa = [s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, ];
-    </script>
-    <table style="padding: 10px; text-align: center; width: 100%;" border="1">
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
         <thead>
             <tr>
                 <th>No</th>
@@ -31,8 +55,23 @@
         <tbody>
             <script>
                 var no = 1;
+                let siswa = [
+                    { "nama": "Budi", "nilai": 80 },
+                    { "nama": "Dewi", "nilai": 90 },
+                    { "nama": "Citra", "nilai": 70 },
+                    { "nama": "Eko", "nilai": 90 },
+                    { "nama": "Fajar", "nilai": 85 },
+                    { "nama": "Gita", "nilai": 85 },
+                    { "nama": "Hadi", "nilai": 65 },
+                    { "nama": "Indra", "nilai": 75 },
+                    { "nama": "Joko", "nilai": 55 },
+                    { "nama": "Krisna", "nilai": 95 },
+                    { "nama": "Lina", "nilai": 85 },
+                    { "nama": "Maya", "nilai": 85 },
+                    { "nama": "Nina", "nilai": 75 }
+                ];
                 for (let s of siswa) {
-                    let ket = (s.nilai >= 60) ? "lulus" : "gagal";
+                    let ket = (s.nilai >= 60) ? "Lulus" : "Gagal";
                     let grade = "";
                     let predikat = "";
                     if (s.nilai > 85 && s.nilai <= 100) grade = "A";
@@ -78,4 +117,4 @@
         </tbody>
     </table>
 </body>
-
+</html>
