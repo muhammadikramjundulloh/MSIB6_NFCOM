@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        #frm {
+            width: 50%;
+            margin: auto;
+        }
+        table {
+            width: 100%;
+            background-color: #fff;
+            border-collapse: collapse;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th {
+            background-color: #111577;
+            color: #fff;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            border: 1px solid #b52727;
+            border-radius: 5px;
+        }
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #6e1c05;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #ffffff;
+            color: #040000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #5d0505;
+            color: #fff;
+        }
+        #hasil {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form id="frm">
+        <table>
+            <tr>
+                <th colspan="2">Form Input</th>
+            </tr>
+            <tr>
+                <td><label for="nama">Nama</label></td>
+                <td>
+                    <input type="text" name="nama" id="nama" placeholder="Masukan nama anda">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="pekerjaan">Pekerjaan</label></td>
+                <td>
+                    <input type="text" name="pekerjaan" id="pekerjaan" placeholder="Masukan pekerjaan anda">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="hobi">Hobi</label></td>
+                <td>
+                    <input type="text" name="hobi" id="hobi" placeholder="Masukan hobi anda">
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <button type="button" onclick="tampilkanData()">Submit</button>
+                </th>
+            </tr>
+        </table>
+    </form>
+    <div id="hasil"></div>
+    <script src="skrip/skrip.js"></script>
+</body>
+</html>
