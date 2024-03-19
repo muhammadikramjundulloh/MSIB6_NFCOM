@@ -38,9 +38,63 @@
     tfoot {
         font-weight: bold;
     }
+    .form-container {
+        margin-bottom: 20px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    .form-container label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .form-container input[type="text"], .form-container select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    .form-container input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #totalButton {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 </style>
 </head>
 <body>
+
+<div class="form-container">
+    <h2>Input Data Pegawai</h2>
+    <form id="pegawaiForm">
+        <label for="nama">Nama Pegawai:</label>
+        <input type="text" id="nama" name="nama" required>
+        <label for="jabatan">Jabatan:</label>
+        <select id="jabatan" name="jabatan" required>
+            <option value="">Pilih Jabatan</option>
+        </select>
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+            <option value="">Pilih Status</option>
+            <option value="Menikah">Menikah</option>
+            <option value="Single">Single</option>
+        </select>
+        <input type="submit" value="Tambah Pegawai">
+    </form>
+</div>
 
 <table id="pegawaiTable">
     <thead>
@@ -59,7 +113,6 @@
     <tfoot id="pegawaiFoot"></tfoot>
 </table>
 
-<script src="tugas4.js"></script>
+<button id="totalButton">Total Gaji Semua Pegawai</button>
 
-</body>
-</html>
+<script src="tugas4.js"></script>
