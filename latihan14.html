@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan 3 js external</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <form id="online">
+        <label for="">Nama Pelanggan</label>
+        <input type="text" name="nama">
+        <label for="">Nama Produk</label>
+        <select name="produk" id="produk"></select> <!-- Perubahan di sini -->
+        <label for="">Jumlah Produk</label>
+        <input type="text" name="jumlah">
+
+        <input type="button" value="beli" onclick="transaksi()"> <!-- Panggil transaksi() saat tombol diklik -->
+    </form>
+</body>
+<script src="toko.js"></script>
+</html>
